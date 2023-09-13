@@ -1,0 +1,374 @@
+*{
+    margin: 0;
+    /* padding: 0; */
+    box-sizing: border-box;
+}
+nav{
+    height: 30%;
+}
+nav .Com{
+    height: 5vh;
+    padding-bottom: none;
+    justify-content: center;
+    /* background-color: #d3d3d3; */
+    align-items: center;
+}
+nav .Com h1{
+    align-items:center;
+    /* height: fit-content; */
+    text-align: end;
+    color: gray;
+    font-family: calibri Light;
+    font-size: 20px;
+    margin-right: 1%;
+    /* background-color: #d3d3d3; */
+    justify-content: center;
+}
+nav .Botones{
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+.uno{
+    width: 100px;
+    margin: auto;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+    height: 90px;
+}
+.uno img{
+    width: 100%;
+    /* background-color: #EEEEEE; */
+}
+.dos{
+    width: 100%;
+    display: flex;
+    margin: auto;
+    justify-content: end;
+    gap: 10px;
+    background-color: white;
+    height: 93px;
+    margin-bottom: 1%;
+    align-items: center;
+    border: none;
+}
+.Fondo img{
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 0%;
+    /* background-color: #d3d3d3; */
+}
+.Frases{
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    text-align: center;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #d3d3d3; */
+    font-family: azonix;
+}
+
+/* drpdown button-consejos */
+.block-consejos{
+    overflow: hidden;
+    display: flex;
+    background-color: white;
+}
+.block-consejos button{
+    background-color: white;
+    border: none;
+    font-size: 20px;
+    font-family: renegade;
+    padding: 17px 15px;
+    align-items: center;
+
+}
+
+.block-consejos .text-consejos{
+    display: none;
+    /* background-color:blue; */
+    color:black;
+    border: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 17px 15px;
+    align-items: center;
+}
+.block-consejos:hover  .text-consejos{
+    display: block;
+    background-color: white;
+    color:black;
+    margin-block: 100%;
+    text-align: center;
+    align-items: center;
+    PADDING-RIGHT: 0px;
+    PADDING-LEFT: 0px;
+    FLOAT: left;
+    PADDING-BOTTOM: 0px;
+    MARGIN: 15px 0px;
+    WIDTH: 100%;
+    PADDING-TOP: 0px;
+    LIST-STYLE-TYPE: none
+
+}
+/* drpdown button-consejos */
+
+
+/* Fuentes */
+@font-face{
+    font-family: designer;
+    src: url(letra1.ttf);
+}
+@font-face{
+    font-family: azonix;
+    src: url(letra2.ttf.otf);
+}
+@font-face{
+    font-family: quantify;
+    src: url(letra3.ttf.ttf);
+}@font-face{
+    font-family: call of duty;
+    src: url(letra4.ttf.otf);
+}
+@font-face{
+    font-family: renegade;
+    src: url(letra5.ttf.otf);
+}
+@font-face {
+    font-family: caviar dreams;
+    src: url(letra6.ttf.ttf);
+}
+@font-face {
+    font-family: caviar dreams negrita;
+    src: url(letra7.ttf.ttf);
+}
+@font-face {
+    font-family: avalon;
+    src: url(letra8.ttf.ttf);
+}
+@font-face {
+    font-family: qualy bold;
+    src: url(Qualy\ Bold.ttf);
+}
+@font-face {
+    font-family: sanset;
+    src: url(Sanset.otf);
+}
+@font-face {
+    font-family: sanseriffic;
+    src: url(Sanseriffic.otf);
+}
+@font-face {
+    font-family: bunya;
+    src: url(Bunya-Regular_PERSONAL.ttf);
+}
+@font-face {
+    font-family: mode okine;
+    src: url(MADEOkineSansPERSONALUSE-Medium.otf);
+}
+@font-face {
+    font-family: carthage;
+    src: url(Carthage\ Pro\ Regular.ttf);
+}
+/* Fuentes */
+
+
+
+
+/* The container  of edad*/
+.Listado-edad{
+    /* background-color:cadetblue; */
+    margin-top: 0%;
+    width: 100%;
+    /* background-color: #d3d3d3; */
+
+}
+.Listado-edad h1{
+    font-size: 70px;
+    margin-left: 1%;
+    margin-top: 1%;
+    margin-right: 1%;
+    /* margin-top: 1%; */
+    font-family: designer;
+    /* background-color: #d3d3d3; */
+}
+.Listado-edad h2{
+    margin-top: 5%;
+    /* background-color: aqua; */
+    font-size: 50px;
+    width: 100p;
+    margin-left: 1%;
+    font-family: sanset;
+    display: flex;
+    background-color: white;
+    margin-right: 1%;
+    margin-bottom: 1%;
+}
+
+/* Las opciones */
+.Listado-edad .container{
+    margin-left: 1%;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    /* margin-bottom: 12px; */
+    cursor: pointer;
+    font-size: 22px;
+    display: flex;
+    /* background-color: white; */
+  }
+  /* Configuracion del botonde la derecha */
+.Listado-edad .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    /* background-color: white; */
+    display: flex;
+  }
+
+  /* Configuracion del circulo*/
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    /* background-color: white; */
+    border-radius: 50%;
+    display: flex;
+  }
+
+  /* Cuando el mouse pasa arriba el color  */
+  .container:hover input ~ .checkmark {
+    background-color: rgb(96, 119, 100);
+    display: flex;
+  }
+
+  /* Configuracion del circulo de seleccion */
+  .container input:checked ~ .checkmark {
+    background-color: rgb(182, 182, 219);
+    display: flex;
+  }
+
+  /* El punto blanco de adentro */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: flex;
+    background-color: violet;
+  }
+
+  /* Configuracion del circulo de adentro*/
+  .container input:checked ~ .checkmark:after {
+    display: block;
+    background-color: #448d4d;
+  }
+
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+        top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      /* border-radius: 50%; */
+      background: none;
+      display: flex;
+  }
+
+/* Opcion 2 */
+
+/* Las opciones */
+.Listado-edad .container{
+    margin-left: 1%;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    /* margin-bottom: 12px; */
+    cursor: pointer;
+    font-size: 22px;
+    display: flex;
+    /* background-color: black; */
+    font-family: caviar dreams negrita;
+  }
+  /* Configuracion del botonde la derecha */
+.Listado-edad .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    background-color: blue;
+    display: flex;
+  }
+
+  /* Configuracion del circulo*/
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    /* background-color: blueviolet; */
+    border-radius: 50%;
+    display: flex;
+  }
+
+  /* Cuando el mouse pasa arriba el color  */
+  .container:hover input ~ .checkmark {
+    background-color: rgb(96, 119, 100);
+    display: flex;
+  }
+
+  /* Configuracion del circulo de seleccion */
+  .container input:checked ~ .checkmark {
+    background-color: rgb(182, 182, 219);
+    display: flex;
+  }
+
+  /* El punto blanco de adentro */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: flex;
+    background-color: violet;
+  }
+
+  /* Configuracion del circulo de adentro*/
+  .container input:checked ~ .checkmark:after {
+    display: block;
+    background-color: #448d4d;
+  }
+
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+        top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      /* border-radius: 50%; */
+      background: none;
+      display: flex;
+  }
+
+/* Boton de enviar  */
+
+#enviar{
+    background-color: #92c098;
+    font-size: 20px;
+    margin-left: 1%;
+    margin-top: 1%;
+    align-items: center;
+}
+/* Boton de enviar  */
+
+/* Boton de los datos de enviar */
+#rutina{
+/* background-color: blue; */
+color: black;
+font-size: 20px;
+margin-top: 1%;
+margin-left: 1%;
+font-family: mode okine;
+}
+/* Boton de los datos de enviar */

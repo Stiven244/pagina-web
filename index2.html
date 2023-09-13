@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYMFITNESSCENTER-GYM</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <nav>
+        <div class="Com">
+            <h1>Comentarios</h1>
+        </div>
+        
+            <div class="Botones"> 
+            <div class="uno">
+                <img src="imagen32.png" alt="">
+            </div>
+            
+
+            <div class="dos">
+                <div class="block-consejos">
+                    <button>Consejos</button>
+                    <div class="text-consejos">
+                        <span>Recuerdo no levantar tanto peso</span>
+                        <span>Entre repeticiones no hacer descansos</span>
+                        <span>Tomar agua</span>
+                    </div>
+                </div>
+                
+                
+                <div class="block-consejos">
+                    <button>Alimentación</button>
+                    <div class="text-consejos">
+                        <span>Entre repeticiones no hacer descansos</span>
+                        <span>Tomar agua</span>
+                        <span>No poner tanto peso</span>
+                    </div>
+                </div>
+                
+                
+                <div class="block-consejos">
+                    <button>Gym</button>
+                    <div class="text-consejos">
+                        <span>Recuerdo no levantar tanto peso</span>
+                        <span>Entre repeticiones no hacer descansos</span>
+                        <span>Tomar agua</span>
+                    </div>
+                </div>   
+            </div>
+    </nav>
+
+    <div class="Frases">
+        <div class="text-frase">
+            <p>YEAH BUDDY</p>
+            <p>LIGHT WEIGHT BABY</p>     
+        </div>
+    </div>
+
+    <div class="Fondo">
+        <img src="imagen6.png"/>
+    </div>
+
+    <!-- Listado -->
+    <div class="Listado-edad">
+        <h1>TE DAMOS TU RUTINA</h1>
+
+        <!-- Opción 1: Edad -->
+        <h2>EDAD</h2>
+        <label class="container">13-15
+          <input type="radio" checked="checked" name="edad">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">16-18
+          <input type="radio" name="edad">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">19-22
+          <input type="radio" name="edad">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">23-25
+          <input type="radio" name="edad">
+          <span class="checkmark"></span>
+        </label>
+        <!-- Fin Opción 1 -->
+
+    </div>
+
+    <div class="Listado-edad">
+        <!-- Opción 2: Peso -->
+        <h2>PESO</h2>
+        <label class="container">Menos de 50 kg
+          <input type="radio" checked="checked" name="peso">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">50-70 kg
+          <input type="radio" name="peso">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">70-90 kg
+          <input type="radio" name="peso">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Más de 90 kg
+          <input type="radio" name="peso">
+          <span class="checkmark"></span>
+        </label>
+        <!-- Fin Opción 2 -->
+
+    </div>
+
+    <div class="Listado-edad">
+        <!-- Opción 3: ¿QUÉ QUIERES? -->
+        <h2>QUE QUIERES?</h2>
+        <label class="container">Definición
+          <input type="radio" checked="checked" name="que-quieres">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Aumento muscular
+          <input type="radio" name="que-quieres">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Aumento de
+            <input type="radio" name="que-quieres">
+            <span class="checkmark"></span>
+          </label>
+        <!-- Fin Opción 3 -->
+
+    </div>
+
+    <div class="Listado-edad">
+        <!-- Opción 4: TIPO DE CUERPO -->
+        <h2>TIPO DE CUERPO</h2>
+        <label class="container">Ectomorfo
+          <input type="radio" checked="checked" name="tipo-cuerpo">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Endomorfo
+          <input type="radio" name="tipo-cuerpo">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Mesomorfo
+          <input type="radio" name="tipo-cuerpo">
+          <span class="checkmark"></span>
+        </label>
+        <!-- Fin Opción 4 -->
+
+    </div>
+
+    <div class="Listado-edad">
+        <!-- Opción 5: INTENSIDAD -->
+        <h2>INTENSIDAD</h2>
+        <label class="container">Baja
+          <input type="radio" checked="checked" name="intensidad">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Media
+          <input type="radio" name="intensidad">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Alta
+          <input type="radio" name="intensidad">
+          <span class="checkmark"></span>
+        </label>
+        <!-- Fin Opción 5 -->
+
+    </div>
+
+    <!--Botón de enviar -->
+        <button id="enviar">Enviar</button>
+    <!--Div para mostrar opciones seleccionadas -->
+    <div id="rutina"></div>
+<!-- Script JavaScript -->
+<script>
+    // Función para mostrar la rutina de ejercicios según las opciones seleccionadas
+    function mostrarRutina() {
+      // Obtener las opciones seleccionadas
+      const edadSeleccionada = document.querySelector('input[name="edad"]:checked').value;
+      const pesoSeleccionado = document.querySelector('input[name="peso"]:checked').value;
+      const queQuieresSeleccionado = document.querySelector('input[name="que-quieres"]:checked').value;
+      const tipoCuerpoSeleccionado = document.querySelector('input[name="tipo-cuerpo"]:checked').value;
+      const intensidadSeleccionada = document.querySelector('input[name="intensidad"]:checked').value;
+
+      // Verificar si todas las opciones necesarias están seleccionadas
+      if (
+        edadSeleccionada &&
+        pesoSeleccionado &&
+        queQuieresSeleccionado &&
+        tipoCuerpoSeleccionado &&
+        intensidadSeleccionada
+      ) {
+
+        if (
+        edadSeleccionada &&
+        pesoSeleccionado &&
+        queQuieresSeleccionado &&
+        tipoCuerpoSeleccionado &&
+        intensidadSeleccionada
+      ) {}
+
+        // Crear la rutina de ejercicios
+        const rutina = `
+          <p>Rutina de hombros:</p>
+          <p>Deltoide frontal-</p>
+          <ul>
+            <li>Vuelos frontales individuales 4x10-12</li>
+            <li>Press militar individual 3x10-12</li>
+            <li>Press militar con Smith 3x8-10</li>
+          </ul>
+          <p>Deltoide lateral-</p>
+          <ul>
+            <li>Vuelos laterales 3x12-15</li>
+            <li>Vuelos laterales en polea 3x10-12</li>
+            <li>Press al mentón 3x8</li>
+          </ul>
+          <p>Deltoide posterior-</p>
+          <ul>
+            <li>Hombro posterior postre 3x10-12</li>
+            <li>Remo alto inclinado 3x8</li>
+            <li>Vuelos posteriores polea 3x10</li>
+          </ul>
+          
+          <p>Rutina de piernas completo:</p>
+          <ul>
+            <li>Pantorrillas en máquina 3x8-12</li>
+            <li>Sentadilla con barra 4x10-12</li>
+            <li>Curls de piernas acostado 3x8-10</li>
+            <li>Curl de piernas sentado 4x10-12</li>
+            <li>Cuádriceps-</li>
+            <li>Prensa de piernas 4x8-10</li>
+            <li>Sentadilla con barra 4x10-12</li>
+            <li>Curl de piernas sentado 4x10-12</li>
+            <li>Zancadas 3x12</li>
+            <li>Sentadilla hack 4x10</li>
+            <li>Isquios-</li>
+            <li>Peso muerto rumano 4x8</li>
+            <li>Curl femoral acostado 3x8-10</li>
+            <li>Curl femoral de pie 3x10</li>
+            <li>Curl femoral sentado 4x12</li>
+            <li>Glúteo-</li>
+            <li>Sentadilla con barra 4x10-12</li>
+            <li>Puente de glúteo 4x12 cada 10 segundos</li>
+            <li>Peso muerto 4x10-12</li>
+            <li>Patada de glúteo 4x10</li>
+            <li>Pantorrilla-</li>
+            <li>Extensión de gemelo sentado 4x8</li>
+            <li>Gemelo en prensa 4x12</li>
+            <li>Gemelo unilateral 4x8</li>
+            <li>Aductor-</li>
+            <li>Aductor en máquina en polea 4x10</li>
+            <li>Aductor en máquina 4x10</li>
+          </ul>
+          
+          <p>Rutina de pecho:</p>
+          <ul>
+            <li>Press de banca 3x10-12</li>
+            <li>Press de banca con mancuernas 3x8-10</li>
+            <li>Press inclinado 3x10-12</li>
+            <li>Press declinado 2x10</li>
+            <li>Flexiones 4x10-12</li>
+          </ul>
+          
+          <p>Rutina de tríceps:</p>
+          <p>Ángulo de 180°</p>
+          <ul>
+            <li>Extensión katana en polea 4x10</li>
+            <li>Extensión trasnuca con mancuerna 4x8</li>
+          </ul>
+          <p>Ángulo de 90°</p>
+          <ul>
+            <li>Press francés con mancuernas 4x10</li>
+            <li>Flexiones diamante 4x12</li>
+          </ul>
+          <p>Ángulo de 0°</p>
+          <ul>
+            <li>Extensión en polea alta 4x12</li>
+            <li>Extensión individual en polea alta 4x10</li>
+          </ul>
+          
+          <p>Rutina de espalda:</p>
+          <p>Dorsales-</p>
+          <ul>
+            <li>Jalón al pecho 3x8</li>
+            <li>Remo en polea 3x8-10</li>
+            <li>Pullover en polea 3x8-10</li>
+            <li>Dominadas con o sin apoyo 3x10-12</li>
+            <li>Remo con mancuerna 3x8-10</li>
+          </ul>
+          <p>Espalda alta-</p>
+          <ul>
+            <li>Jalón al pecho vertical hacia abajo 4x10</li>
+            <li>Peso muerto con barra 4x8-10</li>
+          </ul>
+          
+          <p>Rutina de bíceps:</p>
+          <p>Cabeza larga-</p>
+          <ul>
+            <li>Curl inclinado 4x12</li>
+            <li>Curl con mancuernas 4x10</li>
+            <li>Curl de bíceps en mancuerna Gironda en banca 4x8</li>
+          </ul>
+          <p>Cabeza corta-</p>
+          <ul>
+            <li>Curl Scott 3x8-10</li>
+            <li>Predicador 4x12</li>
+            <li>Predicador en máquina 4x10</li>
+          </ul>
+          <p>Ambas cabezas-</p>
+          <ul>
+            <li>Curl martillo 4x12</li>
+            <li>Curl con mancuernas 4x10</li>
+          </ul>
+          
+          <p>Rutina de Abdomen:</p>
+          <ul>
+            <li>Crunch en máquina o polea 4x15</li>
+            <li>Elevaciones de rodillas 4x10-15</li>
+            <li>Abdominales en banca declinada 4x12</li>
+            <li>Plancha 1 minuto</li>
+          </ul>
+          
+          <p>Rutina de antebrazos:</p>
+          <ul>
+            <li>Curl invertido con barra 3x12</li>
+            <li>Curl antebrazos invertido 3x15</li>
+            <li>Curl antebrazo 3x12</li>
+          </ul>
+        `;
+
+        // Mostrar la rutina en un div
+        const rutinaDiv = document.getElementById("rutina");
+        rutinaDiv.innerHTML = rutina;
+      } else {
+        alert("Debes seleccionar todas las opciones necesarias antes de generar la rutina.");
+      }
+    }
+
+    // Agregar un evento click al botón de enviar
+    document.getElementById("enviar").addEventListener("click", mostrarRutina);
+</script>
+
+
+</body>
+</html>
